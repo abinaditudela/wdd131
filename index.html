@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-    <html lang="en-US">
+<!--June 21st 2024-->
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adan Tudela | Test</title>
-        <meta name="description" content="A common layout on the web">
-        <meta name="author" content="Adan Tudela">
-    </head>
+<html lang="en-US">
 
-    <body>
-        <header>
-            <h1>Dynamic Web Fundamentals</h1>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adan Abinadi Tudela's WDD 131 - Dynamic Web Fundamentals course home page">
+    <meta name="author" content="Adan Tudela">
+    <title>WDD 131 - Dynamic Web Fundamentals - Abinadi Tudela</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="indent">Adan Tudela | WDD 131 - Dynamic Web Fundamentals</h1>
         <nav>
-            <ul>
-                <li><a href="https://byui.edu">BYU-Idaho</a></li>
-                <li><a href="https://churchofjesuschrist.org">The Church</a></li>
-            </ul>
+            <a href="https://www.facebook.com/XCHOKITOX">Facebook</a>
+            <a href="https://www.linkedin.com/in/abinadi-tudela-535597187/">Linkedin</a>
+            <a href="https://byui.instructure.com/">I-Learn </a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=spa&id=p44-p48#p44">
+                Scripture </a>
+            <a href="#">Final Project</a>
         </nav>
-        <main>
-            <section>
-                <article>
-                    <h2>Article 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, deleniti.</p>
+    </header>
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="content">
+            <img src="images/profile.jpg" alt="Hello, it is me Adan Tudela" width="200">
+            <p>Hello! My name is Adán Tudela, I'm 26 years old, and I'm from Cochabamba, Bolivia. I love learning and thrive on mental and logic games, which challenge my problem-solving skills. Soccer is my favorite sport, and listening to music is my best hobby; both provide a great balance to my life.</p>
+            <p>Programming is my passion, and I'm currently finishing my studies to become a software developer. As a systems engineer, I value attention to detail, collaboration, and continuous learning. I'm dedicated, proactive, and always looking for ways to improve. My goal is to create innovative and efficient solutions to real-world problems and make a meaningful impact in the tech industry.</p>
+            <h3>Bolivia My Country</h3>
+            <img src="images/bolivia.jpeg" alt="Bolivia's Salar & Mount Illimani">
+            <p>Bolivia is a country in central South America, with varied terrain from the Andes,<br>
+                the Atacama Desert and the rainforest in the Amazon Basin. <br>
+                At more than 3,500 m high, its administrative capital, La Paz, is located in the Altiplano of the
+                Andes
+                <br>
+                with the snow-capped Mount Illimani in the background.
+            </p>
+        </div>
 
-                </article>
-            </section>
-            <section>
-                <article>
-                    <h2>Article 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, necessitatibus!</p>
-                </article>
-            </section>
-        </main>
-        <aside>
-            <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/adelaide-australia/400x250/adelaide-australia-temple-lds-856093-wallpaper.jpg" alt="adelaide-australia temple" width="200">
-    </aside>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="flex-container">
+            <ul class="list">
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li>
+                    <a href="https://fonts.google.com/">Google Fonts</a>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+                <li>
+                    <a href="https://www.codecademy.com/">Codecademy</a>
+                </li>
+                <li><a href="https://www.youtube.com/">YouTube</a></li>
+            </ul>
+            </div>
+        </section>
+
+    </main>
     <footer>
-        Adan Tudela
+        <p> <span id="currentyear"></span> - Adan Tudela - Cochabamba, Bolivia</p>
+        <span id="lastModified"></span>
     </footer>
-    </body>
+</body>
+
 </html>
