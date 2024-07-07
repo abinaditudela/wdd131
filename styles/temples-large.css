@@ -1,5 +1,8 @@
 header {
     padding: 1.2em 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
@@ -8,8 +11,28 @@ h1 {
     margin-left: 1.5rem;
 }
 
-nav ul {
-    justify-content: flex-start;
+.menu-nav {
+    flex-direction: row;
+    background-color: #4a69bd;
+    justify-content: space-evenly;
+}
+
+.menu-nav a {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+}
+.menu-nav {
+    margin-right: 1.5rem; 
+}
+
+
+nav a:hover {
+    color: #5577bb;
+}
+
+#menu-button {
+    display: none;
 }
 
 main {
@@ -34,7 +57,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #4450C0;
+    background-color: #4a69bd;
     justify-content: center;
     align-items: center;
     padding: 25px;

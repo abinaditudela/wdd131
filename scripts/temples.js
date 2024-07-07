@@ -13,10 +13,10 @@ console.log(document.lastModified)
 
 currentyear.innerHTML = `&copy; <span class="highli">${today.getFullYear()}</span>`;
 
-const menuButton = document.getElementById('menu-button');
-const navMenu = document.getElementById('menu-nav');
+const menuButton = document.querySelector("#menu-button");
+const navMenu = document.querySelector(".menu-nav");
 
 menuButton.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  menuButton.classList.toggle('active');
+  navMenu.classList.toggle('open');
+  menuButton.classList.toggle('open');
 });
