@@ -15,9 +15,6 @@ header {
     position: relative;
     padding: 0.5em;
 }
-h1{
-    margin-left: 1em;
-}
 
 .menu-nav{
     display: flex;
