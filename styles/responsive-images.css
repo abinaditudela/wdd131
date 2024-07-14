@@ -23,6 +23,7 @@ main {
 
 /* Hero image styling */
 .hero {
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -38,10 +39,38 @@ main {
     flex-direction: column;
     align-items: center;
 }
+.info{
+    text-align: center;
+}
+.info ul{
+    list-style-type: none;
+    text-align: left;
+    padding-left: 50px;
+}
 
-/* Media queries */
+.info,
+.weather {
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 1em;
+  border-radius: 5px;
+}
+
+/* Media query para pantallas grandes */
 @media (min-width: 1000px) {
-    .weather .icon::before {
-        content: "⛅";
-    }
+  .info,
+  .weather {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 30%; 
+    max-width: 400px;
+  }
+
+  .weather {
+    top: 110%; 
+    left: 60%;
+  }
+  .weather .icon::before {
+    content: "⛅";
+}
 }
