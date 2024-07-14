@@ -60,14 +60,14 @@ main {
   .info,
   .weather {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 10%;
     width: 30%; 
     max-width: 400px;
   }
 
   .weather {
-    top: 110%; 
+    top: 100%; 
     left: 60%;
   }
   .weather .icon::before {
