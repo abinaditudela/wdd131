@@ -1,0 +1,63 @@
+header {
+    padding: 1.2em 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-left: 1.5rem;
+}
+
+.menu-nav {
+    flex-direction: row;
+    background-color: #4a69bd;
+    justify-content: space-evenly;
+}
+
+.menu-nav a {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+}
+
+.menu-nav {
+    margin-right: 1.5rem; 
+}
+
+nav a:hover {
+    color: #5577bb;
+}
+
+#menu-button {
+    display: none;
+}
+
+main {
+    padding: 2.5em 12%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2em;
+}
+
+.album img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #4a69bd;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}

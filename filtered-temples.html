@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="a picture album page that is responsive in small and larger views">
+    <meta name="author" content="Adan Tudela">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 600px)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz@6..96&family=Oswald:wght@200..700&family=Play&display=swap" rel="stylesheet">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu-button"></button>
+        <nav class="menu-nav">
+            <a href="#" data-filter="all" title="Home" class="active">Home</a>
+            <a href="#" data-filter="old" title="Old">Old</a>
+            <a href="#" data-filter="new" title="New">New</a>
+            <a href="#" data-filter="large" title="Large">Large</a>
+            <a href="#" data-filter="small" title="Small">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="main-title">Home</h2>
+        <div class="album"></div>
+    </main>
+    <footer>
+        <p> <span id="currentyear"></span> - Adan Tudela - Cochabamba, Bolivia</p>
+        <span id="lastModified"></span>
+    </footer>
+</body>
+
+</html>
