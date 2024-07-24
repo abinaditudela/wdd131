@@ -1,0 +1,156 @@
+/* General Styles for Mobile */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #2E8B57;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.2em;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.navigation {
+    display: none;
+    text-align: center;
+}
+
+.navigation.visible {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin-bottom: 10px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topics, .faq, .contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.topics-grid, .faq-container {
+    display: block;
+}
+
+.topic-item, .faq-item {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item img, .faq-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.contact-container {
+    display: block;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    padding: 20px 10px;
+}
+
+/* Responsive product card styles */
+figure {
+    margin: 10px;
+    padding: 10px;
+}

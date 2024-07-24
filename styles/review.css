@@ -1,0 +1,41 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", Arial, sans-serif;
+    color: #112a46;
+}
+
+header {
+    padding: 0.5rem 2%;
+    background-color: #acc8e5;
+    color: #112a46;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #acc8e5;
+    color: #112a46;
+    padding: 0.5rem 2%;
+    text-align: center;
+}

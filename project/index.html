@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cunicultura NABYE</title>
+    <meta name="description" content="Cunicultura NABYE - Your source for rabbit breeding, housing, feeding, care, and more.">
+    <meta name="author" content="Adan Tudela">
+    <link rel="stylesheet" href="styles/main.css" media="screen and (min-width: 769px)">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&display=swap" rel="stylesheet">
+    <script src="scripts/cunicultura.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Cunicultura NABYE</div>
+        <button id="menu" class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="housing.html">Housing</a></li>
+                <li><a href="feeding.html">Feeding</a></li>
+                <li><a href="care.html">Care</a></li>
+                <li><a href="breeding.html">Breeding</a></li>
+                <li><a href="topics.html">Interesting Topics</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero.jpg" media="(min-width: 769px)">
+            <source srcset="images/hero.jpg" media="(max-width: 768px)">
+            <img src="images/hero.jpg" alt="Rabbits">
+        </picture>
+        <div class="hero-text">
+            <h1>Welcome to Cunicultura NABYE</h1>
+            <p>Your source for rabbit breeding, housing, feeding, care, and more.</p>
+        </div>
+    </section>
+
+    <section class="topics">
+        <h2>Explore Our Topics</h2>
+        <div class="topics-grid">
+            <div class="topic-item">
+                <img src="images/housing.jpg" alt="Housing" loading="lazy">
+                <h3>Housing</h3>
+            </div>
+            <div class="topic-item">
+                <img src="images/feeding.jpg" alt="Feeding" loading="lazy">
+                <h3>Feeding</h3>
+            </div>
+            <div class="topic-item">
+                <img src="images/care.jpg" alt="Care" loading="lazy">
+                <h3>Care</h3>
+            </div>
+            <div class="topic-item">
+                <img src="images/breeding.jpg" alt="Breeding" loading="lazy">
+                <h3>Breeding</h3>
+            </div>
+            <div class="topic-item">
+                <img src="images/topics.jpg" alt="Interesting Topics" loading="lazy">
+                <h3>Interesting Topics</h3>
+            </div>
+            <div class="topic-item">
+                <img src="images/store.jpg" alt="Store" loading="lazy">
+                <h3>Store</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>What is the best housing for rabbits?</h3>
+                <p>Rabbits need a clean, dry, and safe environment. A hutch or cage with plenty of space, proper ventilation, and secure locks is ideal.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What should I feed my rabbits?</h3>
+                <p>A balanced diet for rabbits includes hay, fresh vegetables, and a small amount of pellets. Fresh water should always be available.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I care for a sick rabbit?</h3>
+                <p>If your rabbit appears sick, it's important to consult a veterinarian who specializes in rabbits. Keep the rabbit warm, hydrated, and isolated from other pets.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How often should rabbits be bred?</h3>
+                <p>Rabbits can be bred throughout the year, but it's recommended to give female rabbits a break between litters to ensure their health and well-being.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the lifespan of a rabbit?</h3>
+                <p>Rabbits typically live between 8 to 12 years, depending on their breed, care, and living conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+            <div class="social-links">
+                <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 - Cunicultura NABYE - Adan Tudela - Last Modified: July 16, 2024</p>
+    </footer>
+</body>
+
+</html>

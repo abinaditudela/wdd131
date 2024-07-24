@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form Page">
+    <meta name="author" content="Adán Tudela">
+
+    <title>Product Review Form</title>
+
+    <link rel="stylesheet" href="styles/form.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 769px)">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <div class="container">
+        <div class="required">Required inputs marked with asterisk (*).</div>
+        <form action="review.html" method="get">
+            <fieldset>
+                <label for="product-list">Product Name: <span class="required">*</span>
+                    <select name="product-list" id="product-list" required>
+                        <option value="">Select a Product...</option>
+                        <!-- Options will be dynamically populated by JavaScript -->
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <div>Overall Rating: <span class="required">*</span></div>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar">★</label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar">★</label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar">★</label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar">★</label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar">★</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="date">Date of Installation:
+                    <input type="date" name="date" id="date" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <div>Useful Features: </div>
+                <label><input type="checkbox" name="features" id="durability" value="durability"> Durability</label>
+                <label><input type="checkbox" name="features" id="ease" value="ease"> Ease of Use</label>
+                <label><input type="checkbox" name="features" id="performance" value="performance"> Performance</label>
+                <label><input type="checkbox" name="features" id="design" value="design"> Design</label>
+            </fieldset>
+
+            
+                <label for="text-review">Written Review: <span class="optional">(Optional)</span></label>
+                <textarea name="text-review" id="text-review"></textarea>
+            
+
+                <label for="username">Your Name: <span class="optional">(Optional)</span></label>
+                <input type="text" name="username" id="username">
+        
+
+            <input type="submit" value="Post Review">
+        </form>
+    </div>
+    </main>
+
+    <footer>
+        <p><span id="current-year"></span> | Adán Tudela</p>
+        <p>Cochabamba, Bolivia | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

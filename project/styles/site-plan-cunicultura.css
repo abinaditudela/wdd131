@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #2E8B57;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header div {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+nav a {
+    color: #2E8B57;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #2E8B57;
+}
+
+h3 {
+    color: #8FBC8F;
+}
+
+h4 {
+    color: #FFD700;
+}
+
+p {
+    color: #556B2F;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+}
