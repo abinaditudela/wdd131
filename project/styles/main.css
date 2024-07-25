@@ -16,6 +16,13 @@ header {
 header .logo {
     font-size: 1.5em;
 }
+.logo img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: none;
+    clip-path: inset(10px 0px 30px 0px);
+    margin: auto;
+}
 
 .hamburger {
     display: none;
@@ -29,25 +36,49 @@ header .logo {
     margin: 4px 0;
 }
 
+/* Estilo de la barra de navegación */
+.navigation {
+    background-color: #256d45;
+    padding: 15px 0; /* Espaciado adicional para mayor altura */
+    margin-top: -37px;
+}
+
 .navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center; /* Centrar los elementos de la navegación */
 }
 
 .navigation li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin-right: 10px; /* Más espaciado entre los elementos */
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .navigation a {
     color: white;
+    font-size: 20px; /* Tamaño de fuente más grande */
     text-decoration: none;
+    font-weight: bold; /* Negrita para destacar más */
+    padding: 10px 15px; /* Espaciado adicional para el área clicable */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
 }
 
 .navigation a:hover {
-    text-decoration: underline;
+    background-color: #565763; /* Fondo en hover */
+    color: #ffeb3b; /* Color del texto en hover */
+    border-radius: 5px; /* Bordes redondeados en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en hover */
+    transform: translateY(-2px); /* Levantamiento en hover */
 }
+
+.navigation a:active {
+    transform: translateY(1px); /* Efecto de clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera al hacer clic */
+}
+
 
 .hero {
     position: relative;
@@ -66,6 +97,10 @@ header .logo {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.topics a{
+    text-decoration: none;
+    color: black;
+}
 
 .topics, .faq, .contact {
     padding: 20px;
@@ -78,6 +113,17 @@ header .logo {
     gap: 20px;
 }
 
+.topics-grid .topic-item:hover img {
+    transform: scale(1.1); /* Aumenta ligeramente la escala de la imagen */
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s ease;
+}
+
+.topics-grid .topic-item:hover h3 {
+    /* background-color: rgba(0, 0, 0, 0.1); Fondo más oscuro para el texto */
+    transform: scale(1.3);
+}
+
 .topic-item, .faq-item {
     background-color: white;
     padding: 10px;
@@ -87,17 +133,24 @@ header .logo {
 
 .topic-item img, .faq-item img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     border-radius: 5px;
 }
 
 .contact-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    max-width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
-    width: 60%;
+    width: 80%;
 }
 
 .form-row {
@@ -121,33 +174,66 @@ header .logo {
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .social-links {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
 }
 
 .social-links a {
-    margin: 10px 0;
+    margin: 10px 10px;
     text-decoration: none;
-    color: #2E8B57;
+    color: #171b29;
     font-weight: bold;
 }
 .social-links img {
     vertical-align: middle;
 }
 
+input[type="submit"],
+.button-form {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #2E8B57, #556B2F); 
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover,
+.button-form:hover {
+    background: linear-gradient(135deg, #556B2F, #2E8B57);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
+
+input[type="submit"]:active,
+.button-form:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
 footer {
     background-color: #2E8B57;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+.highli{
+    color: #FFD700;
+    font-weight: 700;
+    
 }
 /* Product card styles */
 figure {

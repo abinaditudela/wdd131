@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <div class="logo">Cunicultura NABYE</div>
+        <div class="logo"><img src="images/logo.png" alt="CuniculturaNaebye-logo"></div>
         <button id="menu" class="hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -40,9 +40,9 @@
 
     <section class="hero">
         <picture>
-            <source srcset="images/hero.jpg" media="(min-width: 769px)">
-            <source srcset="images/hero.jpg" media="(max-width: 768px)">
-            <img src="images/hero.jpg" alt="Rabbits">
+            <source srcset="images/banner-home-hero.jpg" media="(min-width: 769px)">
+            <source srcset="images/banner-home-hero.jpg" media="(max-width: 768px)">
+            <img src="images/banner-home-hero.jpg" alt="Rabbits">
         </picture>
         <div class="hero-text">
             <h1>Welcome to Cunicultura NABYE</h1>
@@ -53,30 +53,30 @@
     <section class="topics">
         <h2>Explore Our Topics</h2>
         <div class="topics-grid">
-            <div class="topic-item">
+            <a href="housing.html" class="topic-item">
                 <img src="images/housing.jpg" alt="Housing" loading="lazy">
                 <h3>Housing</h3>
-            </div>
-            <div class="topic-item">
+            </a>
+            <a href="feeding.html" class="topic-item">
                 <img src="images/feeding.jpg" alt="Feeding" loading="lazy">
                 <h3>Feeding</h3>
-            </div>
-            <div class="topic-item">
+            </a>
+            <a href="care.html" class="topic-item">
                 <img src="images/care.jpg" alt="Care" loading="lazy">
                 <h3>Care</h3>
-            </div>
-            <div class="topic-item">
+            </a>
+            <a href="breeding.html" class="topic-item">
                 <img src="images/breeding.jpg" alt="Breeding" loading="lazy">
                 <h3>Breeding</h3>
-            </div>
-            <div class="topic-item">
-                <img src="images/topics.jpg" alt="Interesting Topics" loading="lazy">
+            </a>
+            <a href="topics.html" class="topic-item">
+                <img src="images/topics-banner.jpg" alt="Interesting Topics" loading="lazy">
                 <h3>Interesting Topics</h3>
-            </div>
-            <div class="topic-item">
-                <img src="images/store.jpg" alt="Store" loading="lazy">
+            </a>
+            <a href="store.html" class="topic-item">
+                <img src="images/carrito-store.jpg" alt="Store" loading="lazy">
                 <h3>Store</h3>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -125,18 +125,20 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Send Message</button>
+                    <button type="submit" value="Send" class="button-form">Send Message</button>
                 </div>
             </form>
-            <div class="social-links">
-                <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            </div>
+            
         </div>
     </section>
 
     <footer>
-        <p>© 2024 - Cunicultura NABYE - Adan Tudela - Last Modified: July 16, 2024</p>
+        <p><span id="current-year"></span> | Cunicultura Naebye | Adán Tudela</p>
+        <p>Cochabamba, Bolivia | Last Modified: <span id="lastModified"></span></p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
     </footer>
 </body>
 

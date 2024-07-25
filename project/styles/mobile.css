@@ -11,16 +11,26 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    position: relative;
 }
 
 header .logo {
     font-size: 1.2em;
 }
-
+.logo img{
+    max-height: 200px;;
+}
 .hamburger {
     display: block;
     cursor: pointer;
     margin: 10px auto;
+    background-color: transparent;
+    border: hidden;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    
 }
 
 .hamburger .bar {
@@ -71,9 +81,17 @@ header .logo {
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.hero-text p{
+    display: none;
+}
+
+.topics a{
+    text-decoration: none;
+    color: black;
 }
 
 .topics, .faq, .contact {
@@ -95,12 +113,19 @@ header .logo {
 
 .topic-item img, .faq-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 5px;
 }
 
 .contact-container {
     display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
@@ -122,10 +147,39 @@ header .logo {
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
+input[type="submit"],
+.button-form {
+    background: linear-gradient(135deg, #2E8B57, #556B2F); 
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover,
+.button-form:hover {
+    background: linear-gradient(135deg, #556B2F, #2E8B57);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
+
+input[type="submit"]:active,
+.button-form:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
 
 .social-links {
     display: flex;
@@ -137,7 +191,7 @@ header .logo {
 .social-links a {
     margin: 10px 0;
     text-decoration: none;
-    color: #2E8B57;
+    color: #FFD700;
     font-weight: bold;
 }
 
@@ -148,7 +202,11 @@ footer {
     padding: 10px 0;
     padding: 20px 10px;
 }
-
+.highli{
+    color: #FFD700;
+    font-weight: 700;
+    
+}
 /* Responsive product card styles */
 figure {
     margin: 10px;
