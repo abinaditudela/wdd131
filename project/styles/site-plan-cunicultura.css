@@ -61,3 +61,12 @@ img {
     display: block;
     margin: 10px auto;
 }
+.wireframe{
+ text-align: center;
+}
+.wireframe img{
+    clip-path: inset(0px 0px 80px 0px);
+}
+.wireframe img:nth-of-type(2){
+    clip-path: inset(0px 150px 210px 0px);
+}
