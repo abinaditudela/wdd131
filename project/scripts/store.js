@@ -3,7 +3,7 @@ const products = [
     {
         id: 1,
         productName: "Organic Rabbit Feed",
-        description: "High-quality feed for rabbits.",
+        description: "High-quality feeding for rabbits.",
         price: 20.00,
         imageUrl: "images/pellet.jpeg",
         likes: 0
@@ -19,7 +19,7 @@ const products = [
     {
         id: 3,
         productName: "Bedding Straw",
-        description: "Comfortable bedding for rabbits.",
+        description: "Comfortable straw bedding for rabbits.",
         price: 15.00,
         imageUrl: "images/product3.jpeg",
         likes: 0
@@ -157,7 +157,7 @@ function sendOrder() {
     message += `\nTotal: $${document.querySelector("#cart-total").textContent}`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/1234567890?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/79352506?text=${encodedMessage}`, '_blank');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
