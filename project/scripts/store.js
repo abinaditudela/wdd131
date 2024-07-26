@@ -1,112 +1,169 @@
-// Array of Product Objects
+// store.js
 const products = [
     {
+        id: 1,
         productName: "Organic Rabbit Feed",
         description: "High-quality feed for rabbits.",
         price: 20.00,
-        imageUrl: "https://example.com/product1.jpg",
+        imageUrl: "images/pellet.jpeg",
         likes: 0
     },
     {
+        id: 2,
         productName: "Rabbit Hutch",
         description: "Spacious and sturdy hutch.",
         price: 150.00,
-        imageUrl: "https://example.com/product2.jpg",
+        imageUrl: "images/product2.jpg",
         likes: 0
     },
     {
+        id: 3,
         productName: "Bedding Straw",
         description: "Comfortable bedding for rabbits.",
         price: 15.00,
-        imageUrl: "https://example.com/product3.jpg",
+        imageUrl: "images/product3.jpeg",
         likes: 0
     },
     {
+        id: 4,
         productName: "Water Bottle",
         description: "Durable water bottle for rabbits.",
         price: 10.00,
-        imageUrl: "https://example.com/product4.jpg",
+        imageUrl: "images/product4.jpeg",
         likes: 0
     }
-    // Add more products as needed...
 ];
 
-// Function to generate product cards
+let cart = [];
+
 function generateProductCards(products) {
     const album = document.querySelector(".album");
-    album.innerHTML = ""; // Clear existing content
+    album.innerHTML = "";
 
-    products.forEach((product, index) => {
+    products.forEach((product) => {
         const figure = document.createElement("figure");
+        figure.classList.add("product-card");
 
-        const img = document.createElement("img");
-        img.src = product.imageUrl;
-        img.alt = product.productName;
-        img.loading = "lazy";
-
-        const figcaption = document.createElement("figcaption");
-        figcaption.innerHTML = `
-            <h3>${product.productName}</h3>
-            <p>${product.description}</p>
-            <p>Price: $${product.price.toFixed(2)}</p>
-            <div class="likes">
-                <button class="like-btn" data-index="${index}">
-                    <i class="fa fa-thumbs-up"></i> Like
-                </button>
-                <span id="likeCount-${index}">Likes: ${product.likes}</span>
-            </div>
+        figure.innerHTML = `
+            <img src="${product.imageUrl}" alt="${product.productName}" loading="lazy">
+            <figcaption>
+                <h3>${product.productName}</h3>
+                <p>${product.description}</p>
+                <p>Price: $${product.price.toFixed(2)}</p>
+                <div class="product-actions">
+                    <button class="like-btn" data-id="${product.id}">
+                        <i class="fa fa-thumbs-up"></i> Like (<span class="like-count">${product.likes}</span>)
+                    </button>
+                    <button class="buy-btn" data-id="${product.id}">Add to Cart</button>
+                </div>
+            </figcaption>
         `;
 
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
         album.appendChild(figure);
     });
 
     document.querySelectorAll('.like-btn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const index = event.currentTarget.getAttribute('data-index');
-            products[index].likes++;
-            document.getElementById(`likeCount-${index}`).textContent = `Likes: ${products[index].likes}`;
-            saveToLocalStorage(index, 'likes', products[index].likes);
-        });
+        button.addEventListener('click', handleLike);
+    });
+
+    document.querySelectorAll('.buy-btn').forEach(button => {
+        button.addEventListener('click', addToCart);
     });
 }
 
-// Save to localStorage
-function saveToLocalStorage(index, key, value) {
-    let storedProducts = JSON.parse(localStorage.getItem("products")) || products;
-    storedProducts[index][key] = value;
-    localStorage.setItem("products", JSON.stringify(storedProducts));
+function handleLike(event) {
+    const productId = parseInt(event.currentTarget.getAttribute('data-id'));
+    const product = products.find(p => p.id === productId);
+    product.likes++;
+    event.currentTarget.querySelector('.like-count').textContent = product.likes;
+    saveToLocalStorage();
 }
 
-// Load from localStorage
+function addToCart(event) {
+    const productId = parseInt(event.currentTarget.getAttribute('data-id'));
+    const product = products.find(p => p.id === productId);
+    
+    const existingItem = cart.find(item => item.id === productId);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+    
+    updateCart();
+    saveToLocalStorage();
+}
+
+function updateCart() {
+    const cartList = document.querySelector("#cart-list");
+    cartList.innerHTML = "";
+    
+    let total = 0;
+    
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item.productName} - Quantity: ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}
+            <button class="remove-btn" data-id="${item.id}">Remove</button>
+        `;
+        cartList.appendChild(li);
+        total += item.price * item.quantity;
+    });
+    
+    document.querySelector("#cart-total").textContent = total.toFixed(2);
+    
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', removeFromCart);
+    });
+}
+
+function removeFromCart(event) {
+    const productId = parseInt(event.currentTarget.getAttribute('data-id'));
+    cart = cart.filter(item => item.id !== productId);
+    updateCart();
+    saveToLocalStorage();
+}
+
+function saveToLocalStorage() {
+    localStorage.setItem("products", JSON.stringify(products));
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 function loadFromLocalStorage() {
     const storedProducts = JSON.parse(localStorage.getItem("products"));
+    const storedCart = JSON.parse(localStorage.getItem("cart"));
+    
     if (storedProducts) {
-        storedProducts.forEach((product, index) => {
-            products[index].likes = product.likes;
+        products.forEach((product, index) => {
+            product.likes = storedProducts[index].likes;
         });
+    }
+    
+    if (storedCart) {
+        cart = storedCart;
     }
 }
 
-// Initial load
+function sendOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    
+    let message = "Hello, I'd like to place an order for:\n\n";
+    cart.forEach(item => {
+        message += `${item.quantity}x ${item.productName}\n`;
+    });
+    message += `\nTotal: $${document.querySelector("#cart-total").textContent}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/1234567890?text=${encodedMessage}`, '_blank');
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadFromLocalStorage();
     generateProductCards(products);
+    updateCart();
 
-    // Update footer year and last modified date
-    const lastModified = document.querySelector("#lastModified");
-    const currentyear = document.querySelector("#currentyear");
-
-    const today = new Date();
-    lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
-    currentyear.innerHTML = `&copy; ${today.getFullYear()}`;
-
-    const menuButton = document.querySelector("#menu-button");
-    const navMenu = document.querySelector(".menu-nav");
-
-    menuButton.addEventListener('click', () => {
-        navMenu.classList.toggle('open');
-        menuButton.classList.toggle('open');
-    });
+    document.querySelector("#send-order").addEventListener('click', sendOrder);
 });

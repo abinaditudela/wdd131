@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing - Cunicultura NABYE</title>
-    <meta name="description" content="Housing information for rabbit breeding at Cunicultura NABYE.">
+    <title>Store | Cunicultura NABYE</title>
+    <meta name="description" content="Online store for products related to rabbit breeding.">
     <meta name="author" content="Adan Tudela">
     <link rel="stylesheet" href="styles/main.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/store.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&display=swap" rel="stylesheet">
     <script src="scripts/cunicultura.js" defer></script>
+    <script src="scripts/store.js" defer></script>
 </head>
 
 <body>
@@ -38,11 +40,26 @@
         </nav>
     </header>
 
-    <section class="content">
-        <h1>Housing for Rabbits</h1>
-        <p>Detailed information about housing options, best practices, and tips for keeping your rabbits comfortable and safe.</p>
-        <!-- Añadir más contenido relacionado con "Housing" aquí -->
-    </section>
+    <main role="main">
+        <section class="store-hero">
+            <img src="images/rabbit-store-banner.jpg" alt="rabbit-store-banner">
+            <div class="store-hero-text">
+                <h1>Cunicultura Naebye Store</h1>
+            </div>
+            
+        </section>
+    
+        <section class="album">
+            <!-- Product cards will be generated here by JavaScript -->
+        </section>
+    
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-list"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="send-order">Send Order via WhatsApp</button>
+        </section>
+    </main>
 
     <footer>
         <p><span id="current-year"></span> | Cunicultura Naebye | Adán Tudela</p>

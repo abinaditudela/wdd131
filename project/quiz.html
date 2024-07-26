@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing - Cunicultura NABYE</title>
-    <meta name="description" content="Housing information for rabbit breeding at Cunicultura NABYE.">
+    <title>Quiz Page | NABYE</title>
+    <meta name="description" content="nteractive quiz to assess visitors' knowledge.">
     <meta name="author" content="Adan Tudela">
     <link rel="stylesheet" href="styles/main.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&display=swap" rel="stylesheet">
     <script src="scripts/cunicultura.js" defer></script>
+    <script src="scripts/quiz.js" defer></script>
 </head>
 
 <body>
@@ -38,11 +39,13 @@
         </nav>
     </header>
 
-    <section class="content">
-        <h1>Housing for Rabbits</h1>
-        <p>Detailed information about housing options, best practices, and tips for keeping your rabbits comfortable and safe.</p>
-        <!-- Añadir más contenido relacionado con "Housing" aquí -->
-    </section>
+    <main role="main">
+        <section class="quiz-container">
+            <h1>Test Your Rabbit Knowledge</h1>
+            <div id="quiz"></div>
+            <button type="submit" id="submit" disabled>Submit Answer</button>
+        </section>
+    </main>
 
     <footer>
         <p><span id="current-year"></span> | Cunicultura Naebye | Adán Tudela</p>
